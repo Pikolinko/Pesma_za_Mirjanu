@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="sr">
+<head>
+<meta charset="utf-8"/>
+<title>Мирјана</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&amp;family=Great+Vibes&amp;family=Cinzel+Decorative:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #d8cfc0;
+            padding: 20px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Glavni omotač — slika kao pozadina */
+        .letter-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            aspect-ratio: 3 / 4;
+            background: url("Pesma.jpg") no-repeat center center;
+            background-size: contain;
+        }
+
+        /* Tekst direktno na slici, bez pozadine */
+        .letter-content {
+            position: absolute;
+            top: 10%;
+            left: 14%;
+            right: 14%;
+            bottom: 10%;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        /* Skrol bar — diskretan */
+        .letter-content::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        .letter-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .letter-content::-webkit-scrollbar-thumb {
+            background: rgba(196, 163, 90, 0.25);
+            border-radius: 2px;
+        }
+
+        /* Sadržaj */
+        .content {
+            text-align: center;
+        }
+
+        /* Naslov */
+        .title {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 34px;
+            color: #5a3d2b;
+            letter-spacing: 6px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(250, 246, 237, 0.6);
+        }
+
+        /* Ukras ispod naslova */
+        .title-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 22px;
+            opacity: 0.45;
+        }
+
+        .title-divider .line {
+            width: 45px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #b08d55, transparent);
+        }
+
+        .title-divider .ornament {
+            color: #b08d55;
+            font-size: 16px;
+        }
+
+        /* Stihovi */
+        .poem {
+            text-align: left;
+            color: #4a3525;
+            font-size: 14.5px;
+            line-height: 1.95;
+            letter-spacing: 0.2px;
+        }
+
+        .stanza {
+            margin-bottom: 14px;
+        }
+
+        .stanza::first-letter {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 44px;
+            float: left;
+            line-height: 0.85;
+            padding-right: 8px;
+            padding-top: 4px;
+            color: #a08050;
+            text-shadow: 1px 1px 2px rgba(250, 246, 237, 0.5);
+        }
+
+        /* Potpis */
+        .signature-section {
+            margin-top: 22px;
+            text-align: left;
+            padding-right: 10px;
+        }
+
+        .closing {
+            font-style: italic;
+            color: #6a4a35;
+            font-size: 13px;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .signature {
+            font-family: 'Great Vibes', cursive;
+            font-size: 34px;
+            color: #5a3d2b;
+            line-height: 1;
+        }
+
+        .signature-ornament {
+            margin-top: 16px;
+            text-align: center;
+            opacity: 0.35;
+        }
+
+        .signature-ornament svg {
+            width: 55px;
+            height: 14px;
+        }
+
+        /* Print */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .letter-wrapper {
+                max-width: 100%;
+                aspect-ratio: auto;
+                height: 100vh;
+                background-size: cover;
+            }
+        }
+
+        /* Responzivnost */
+        @media (max-width: 600px) {
+            .letter-wrapper {
+                aspect-ratio: auto;
+                min-height: 100vh;
+                background-size: cover;
+            }
+            .letter-content {
+                top: 8%;
+                left: 10%;
+                right: 10%;
+                bottom: 8%;
+                padding: 15px;
+            }
+            .title {
+                font-size: 26px;
+                letter-spacing: 3px;
+            }
+            .poem {
+                font-size: 12.5px;
+                line-height: 1.8;
+            }
+            .stanza::first-letter {
+                font-size: 36px;
+            }
+            .signature {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="letter-wrapper">
+<div class="letter-content">
+<div class="content">
+<h1 class="title">Mirjana</h1>
+<div class="title-divider">
+<span class="line"></span>
+<span class="ornament">❦</span>
+<span class="line"></span>
+</div>
+<div class="poem">
+<div class="stanza">
+                        Кад јутро сване, а град још дрема,<br/>
+                        у мислима мојим само твоје лице снева.<br/>
+                        Твој осмех је моја радост, тиха светлост дана,<br/>
+                        због њега и најдужа ноћ постаје обасјана.
+                    </div>
+<div class="stanza">
+                        Твој загрљај мој мир, лука кад олује боле,<br/>
+                        у њему нестану све туге што срце моле.<br/>
+                        Кад ме привијеш нежно, сав свет умукне тада,<br/>
+                        и остане само љубав што кроз нас тихо влада.
+                    </div>
+<div class="stanza">
+                        Са тобом време не уме да стане,<br/>
+                        већ лети лако као нежан сан,<br/>
+                        у сваком трену крај твога рамена<br/>
+                        читав ми живот постане безбрижан дан.
+                    </div>
+<div class="stanza">
+                        Дивим се твојој души што добротом светли,<br/>
+                        што снагу увек нађеш кад се живот петља.<br/>
+                        За људе које волиш ти си ослонац и нада,<br/>
+                        а осмех носиш храбро чак и кад ти тешко пада.
+                    </div>
+<div class="stanza">
+                        Кад ниси крај мене, тишина превише боли,<br/>
+                        празнина се увуче где срце само воли.<br/>
+                        Недостајеш ми више него што знам рећи,<br/>
+                        као што талас мору тежи својој срећи.
+                    </div>
+<div class="stanza">
+                        Пред сваки нови сусрет немирно срце чека,<br/>
+                        као да вечност траје од јутра па до века.<br/>
+                        А кад те угледам — све бриге тихо сплану,<br/>
+                        и цео свет замирише на љубав у румену зрану.
+                    </div>
+<div class="stanza">
+                        Захвалан сам Богу што те мени даде,<br/>
+                        јер с тобом срце пуно је и наде.<br/>
+                        Што моје дане твојим смехом боји,<br/>
+                        и бољи човек постајем — то су дарови твоји.
+                    </div>
+<div class="stanza">
+                        Пожелим да те грлим док ноћи тихо трају,<br/>
+                        да љубим твоје очи што нежно сјаје у рају.<br/>
+                        Да будем сасвим близу твога срца што ме зове,<br/>
+                        док љубав наше душе у једну песму споје.
+                    </div>
+<div class="stanza">
+                        И чуваћу те заувек, од туге и од зиме,<br/>
+                        у најскривенијем делу где срце чува име.<br/>
+                        Као дукат блистав што вреднији је од свега,<br/>
+                        Мирјана моја, љубави — ти си смисао мога неба.
+                    </div>
+</div>
+<div class="signature-section">
+<p class="closing">— Zauvek tvoj</p>
+<p class="signature">Zauvek tvoj</p>
+</div>
+<div class="signature-ornament">
+<svg viewbox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
+<path d="M0,10 Q25,0 50,10 T100,10" fill="none" opacity="0.6" stroke="#b08d55" stroke-width="0.5"></path>
+<circle cx="50" cy="10" fill="#b08d55" opacity="0.5" r="2"></circle>
+<circle cx="20" cy="8" fill="#b08d55" opacity="0.3" r="1"></circle>
+<circle cx="80" cy="12" fill="#b08d55" opacity="0.3" r="1"></circle>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
