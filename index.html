@@ -14,24 +14,32 @@
         }
 
         body {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #d8cfc0;
-            padding: 20px;
-            font-family: 'Cormorant Garamond', serif;
-        }
+			width: 100vw;
+			height: 100vh;
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+			background: #d8cfc0;
+			padding: 10px;
+			font-family: 'Cormorant Garamond', serif;
+		}
 
-        /* Glavni omotač — slika kao pozadina */
-        .letter-wrapper {
-            position: relative;
-            width: 100%;
-            max-width: 700px;
-            aspect-ratio: 3 / 4;
-            background: url("Pesma.jpg") no-repeat center center;
-            background-size: contain;
-        }
+		/* Glavni omotač — automatski se uklapa u širinu i visinu ekrana */
+		.letter-wrapper {
+			position: relative;
+
+			width: min(
+				calc(100vw - 20px),
+				calc((100vh - 20px) * 3 / 4)
+		);
+
+			aspect-ratio: 3 / 4;
+
+			background: url("Pesma.jpg") no-repeat center center;
+			background-size: 100% 100%;
+		}
 
         /* Tekst direktno na slici, bez pozadine */
         .letter-content {
@@ -170,11 +178,14 @@
 
         /* Responzivnost */
         @media (max-width: 600px) {
-            .letter-wrapper {
-                aspect-ratio: auto;
-                min-height: 100vh;
-                background-size: cover;
-            }
+			.letter-wrapper {
+				width: min(
+					calc(100vw - 10px),
+					calc((100vh - 10px) * 3 / 4)
+				);
+				aspect-ratio: 3 / 4;
+				background-size: 100% 100%;
+    }
             .letter-content {
                 top: 8%;
                 left: 10%;
