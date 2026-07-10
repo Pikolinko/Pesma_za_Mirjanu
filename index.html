@@ -202,6 +202,9 @@
         }
     </style>
 </head>
+<audio id="backgroundMusic" loop preload="auto">
+    <source src="melodija.m4a" type="audio/mp4">
+</audio>
 <body>
 <div class="letter-wrapper">
 <div class="letter-content">
@@ -282,5 +285,10 @@
 </div>
 </div>
 </div>
+<script>
+		document.addEventListener("click", function () {
+			document.getElementById("backgroundMusic").play();
+		}, { once: true });
+</script>
 </body>
 </html>
